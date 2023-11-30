@@ -108,7 +108,7 @@ document.getElementById('openSetGoals').addEventListener('click', function()
     // Timeout to allow CSS to catch up
     setTimeout(function() {
         popup.style.opacity = 1; // End with full opacity
-        popup.style.top = '170px'; // End position
+        popup.style.top = '109px'; // End position
     }, 10); // Small delay
 
 
