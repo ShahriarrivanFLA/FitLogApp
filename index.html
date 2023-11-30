@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en"> <!--//////////////////////////////////////////-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+    <title>Calorie and Protein Logger</title>
+</head>
+<body>
+    <div class="content-container">
+
+        
+       
+        
+        <!-- <button id="openSetGoals">Set Goals</button> -->
+
+    
+        <!-- <button id="toggleAddFoodButton">+</button> -->
+        <!-- <button id="editFoodItems" class="hidden">Add a new item</button> -->
+        
+        <!-- <div class="stats hidden" style="color: aqua;"> -->
+            <!-- <p>Today's Total Calories: <span id="todaysCaloriesx">0</span></p>
+            <p>Today's Total Protein: <span id="todaysProteinx">0</span></p>
+            <p>Yesterday's Total Calories: <span id="yesterdaysCaloriesx">0</span></p>
+            <p>Yesterday's Total Protein: <span id="yesterdaysProteinx">0</span></p> -->
+            <!-- <p>This Week's Average Calories: <span id="thisWeeksAvgCalories">0</span></p> -->
+            <!-- <p>This Week's Average Protein: <span id="thisWeeksAvgProtein">0</span></p> -->
+            <!-- <p>Last Week's Average Calories: <span id="lastWeeksAvgCalories">0</span></p> -->
+            <!-- <p>Last Week's Average Protein: <span id="lastWeeksAvgProtein">0</span></p> -->
+            <!-- <p>weight target from db <span id="wttrgtx">0</span></p>
+            <p>change since day uno <span id="chngday1">0</span></p> -->
+            <!-- <div id="currentDateTime" class="dateTimeDisplay"></div> -->
+        <!-- </div> -->
+
+        
+        <!-- ============================================================= -->
+ 
+
+
+<div class="App" style="position: relative;width: -webkit-fill-available; height: auto; padding-top: 0px; padding-bottom: 15px; background: linear-gradient(194deg, black 0%, #161230 40%, black 100%); border-radius: 53px; overflow: hidden;display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; ">
+            
+
+            <div class="cameraSpace" style="position:relative; width: auto; height: 40px;"></div>
+
+            <img class="Logotop" style="width: 132px; height: 41px" src="logoWthTxt.PNG" />
+
+
+            <div class="Weekdayprogressndgoals" style="width: 414px; height: 132px; position: relative;display: flex;justify-content: space-between;flex-direction: row;">
+              
+                <div class="Rectangle1" style="width: 128px; height: 132px; left: 0px; top: 0px; position: relative; background: linear-gradient(217deg, #757575 0%, #051cff 89%); border-radius: 23px;display: flex; flex-direction: column; justify-content: space-around;align-items: center;">
+                        
+                        <div class="Week" style="width: 128px; height: 35px; left: 0px; top: 0px; position: relative; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible ; font-style: italic ;font-weight: 700; word-wrap: break-word">WEEK</div>
+                        <div style="width: 64px; height: 30px; left: 0px; top: -43px; position: relative; text-align: center; color: black; font-size: 55px; font-family: Anton; font-weight: 400; word-wrap: break-word"><span id="weekSS">0</span></div>
+
+                </div>
+                
+                
+                <div class="Rectangle2" style="width: 128px; height: 132px; left: 0px; top: 0px; position: relative; background: linear-gradient(217deg, #f01414 0%, #ffbb00 100%); border-radius: 23px;display: flex; flex-direction: column; justify-content: space-around;align-items: center;">
+                    
+                        <div class="Day" style="width: 128px; height: 43px; left: 0px; top: 0px; position: relative; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 700; font-style: italic; word-wrap: break-word">DAY</div>
+                        <div style="width: 64px; height: 30px; left: 0px; top: -43px; position: relative; text-align: center; color: black; font-size: 55px; font-family: Anton; font-weight: 400; word-wrap: break-word"><span id="daysSS">0</span></div>
+                        
+                </div>
+                
+                <div class="rectangle 3" style="position: relative;display: flex;flex-direction: column; justify-content: space-between;">
+                        
+                        <div class="progressCont" style="width: 128px; height: 93px; left: 0px; top: 0px; position: relative; background: linear-gradient(217deg, #008aff 0%, #ff000f 94%); border-radius: 23px; display: flex; flex-direction: column; justify-content: space-around; align-items: center;">
+                            <div class="Progress" style="width: 128px; height: 44px; left: 0px; top: 5px; position: relative; text-align: center; color: white; font-size: 18px; font-family: Atkinson Hyperlegible; font-weight: 700; font-style: italic; word-wrap: break-word">PROGRESS</div>
+                            <div class="Progress" style="width: 128px; height: 44px; left: 0px; top: 2px; position: relative; text-align: center; color: white; font-size: 10px; font-family: Atkinson Hyperlegible; font-weight: 400; font-style: italic; word-wrap: break-word;word-spacing: 25px;">WEEK WEIGHT</div>
+                            <div style="position: relative;width: 127;display: flex;flex-direction: row; justify-content: space-evenly; align-items: center;">
+                                <div style="width: auto; height: 53px; left: 0px; top: 0px; position: relative; text-align: center"><span style="color: black; font-size: 31px; font-family: Anton; font-weight: 400; word-wrap: break-word"><span id="progWeekPercentage">--</span></span><span style="color: black; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-wordl">%</span></div>
+                                <div style="margin-left: 8px;width: auto; height: 53px; left: 0px; top: 0px; position: relative; text-align: center"><span style="color: black; font-size: 31px; font-family: Anton; font-weight: 400; word-wrap: break-word"><span id="progPercentage">--</span></span><span style="color: black; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-word">%</span></div>
+                            </div>
+                        </div>
+
+                        <button id="openSetGoals" style="border-style: none;width: 128px; height: 33px; left: 0px; top: 0px; position: relative; background: linear-gradient(217deg, #dcff00 0%, #219eff 94%); border-radius: 20px; font-family: Atkinson Hyperlegible; font-weight:bolder; font-style: italic;font-size: 22px; color: rgb(0, 0, 0);border-style: solid;border-color: #76ff00;">Goals</button>
+
+                </div>
+
+            </div>
+
+
+
+        <!-- ======================================== popups ======================================== -->
+
+            <div id="addFoodForm" class="addFoodPopup hidden">
+                <h3>Add New Food Item</h3>
+                <input type="text" id="newFoodName" placeholder="Food Name">
+                <input type="number" id="newCaloriesPerGram" placeholder="Calories per Gram">
+                <input type="number" id="newProteinPerGram" placeholder="Protein per Gram">
+                <button id="submitNewFood">Add/Update</button>
+    
+                <h4>Manage Existing Food Items</h4>
+                <div id="existingFoodItemsList">
+                    <!-- Existing food items will be listed here -->
+                </div>
+    
+                <button id="cancelNewFood">Cancel</button>
+            </div>
+    
+
+    
+            <div id="setGoalsForm" class="setGoalsPopup hidden"> 
+
+                <div style="display: flex; flex-direction: row; justify-content: space-between; position: relative;">
+                    <div style="position: relative;">
+                        <button id="submitGoals" style="width:49px;height: 330px; font-family: Anton; font-size: 27px; font-weight: 400;border-radius: 10px; border-style: none;color: rgb(0, 0, 0);background-color: #e0ff00;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 64%);">U<br>P<br>D<br>A<br>T<br>E</button>
+                    </div>
+    
+                    <div style="position: relative; background-color: #e0ff00; padding: 11px 11px 11px 3px; border-radius: 10px;width: 270px;">
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-top: 0px;margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Target Weight <input type="number" id="weightTarget" placeholder="Pounds" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 44px; background-color: #ececec; border-style: solid;"></p>
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Daily Calorie Target <input type="number" id="dailyCalorieTarget" placeholder="Calorie" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 0px;background-color: #ececec; border-style: solid;"></p>
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Daily Protein Target <input type="number" id="dailyProteinTarget" placeholder="Protein" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 0px;background-color: #ececec; border-style: solid;"></p>
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Progress Duration <input type="number" id="weekTarget" placeholder="Week" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 10px;background-color: #ececec; border-style: solid;"></p>
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Starting Week <input type="number" id="StartingWeight" placeholder="Pounds" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 42px;background-color: #ececec; border-style: solid;"></p>
+                        <p style=" color: rgb(0, 0, 0); background-color: #90001100; height: 20px; width: auto;padding: 9px; margin-bottom: 0px; margin-left: 5px; text-align: end; border-radius: 8px; font-weight: bolder;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 15%);">Current Weight <input type="number" id="currentWeight" placeholder="Pounds" style="width: 70px;  text-align: center; border-style: none;border-radius: 5px;margin-left: 34px;background-color: #ececec; border-style: solid;"></p>
+                    </div>
+                </div>
+               
+               
+                <p > <button id="showResetBtn" style="background-color: #900010; color: white; font-weight: bolder; border-style: none; border-radius: 10px; width:50px;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 64%);">Set</button> <span style="color: white; background-color: #53535394;border-radius: 15px; padding: 1px 9px;font-weight: bolder;font-size: 13px;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 64%);">Tracking date to today?</span><button id="resetGoalStart" class="resetGoaldate hidden" style="background-color: #900010; color: white; font-weight: bolder; border-style: none; border-radius: 3px; width:75px;margin-left: 38px;box-shadow: -1px 0px 10px 6px rgb(0 0 0 / 64%);">CONFIRM</button></p>
+
+
+                <button id="cancelGoals" style="border-radius: 20px;background-color: #cf3e00; border-style: solid;  border-color: white; font-size: larger;  font-weight: bolder;  position: relative;">Cancel</button>
+                
+            </div>
+
+        <!-- ======================================== popups ends ======================================== -->
+          
+
+
+            
+            <!-- <div class="Inputsndstats" style="width: 414px; height: 444px; position: relative"> -->
+             <div class="Inputprogressstatscontainer" style="display: flex;flex-direction: column;justify-content: space-around;align-items: center;width: 414px; height: 444px; left: 0px; top: 0px; position: relative; background: rgba(0, 0, 0, 0.05); box-shadow: 0px 10px 23.399999618530273px 7px rgba(35.40, 69.28, 189.41, 0.11) inset; border-radius: 40px; border: 3px rgba(122.06, 128.90, 164.78, 0.20) solid; backdrop-filter: blur(8.80px)">
+                    
+                <div class="inputField" style="width: 359px; height: 30px; left: 0px; top: 10px; position: relative; display:flex;flex-direction: row; justify-content: center; align-items: center;">
+                    
+                   
+                    <select id="foodItemDropdown" class="foodDropdown" style="    width: 181.42px  ; height: 25px; left: 0px; top: 0px;   position: relative; background: black;  border-radius: 23px;  padding-left: 19px;  color: white; border-color: white;margin: 0px -8px 0px 0px;">
+                        <option value="">Select a food item...</option>
+                        <!-- Food items will be added here dynamically /-->
+                        <option value="addNewItem">Add New Item</option>
+                    </select>
+                    <input type="number" placeholder="Amount in grams" id="foodAmount" style="color: black; text-align: center; width: 145.8px; height: 25px;  left: 0px;  top: 0px;  position: relative;   background: #ffffff; border-radius: 23px; border-style: none;    text-align: center;  padding:0px 10px 0px 29px; margin-left: -19px;">
+                    <button id="addFood" class="AddBtn" style="color: black;font-weight: bolder;width: 57.57px;height: 25px;left: 0px;top: 0px; position: relative; background: #E3FE17; border-radius: 23px; border: 1px #ffffff solid; margin-left: -21px; z-index: 1;    box-shadow: -7px 0px 12px 0px rgb(0 0 0 / 28%);">Add</button>
+                </div>
+
+
+                <div class="progress-container" style="width: 359px; height: 22px; left: 0px; top: 0px; position: relative">
+                    <p style="font-size: 10px;margin-right: 10px;color: rgb(195, 255, 0);">Calorie</p>
+                    <div class="progress-bar" id="calorieProgressBar">
+                        <div class="progress" id="calorieProgress"></div>
+                    </div>
+                </div>
+
+                <div class="progress-container" style="width: 359px; height: 22px; left: 0px; top: -11px; position: relative">
+                    <div class="progress-bar" id="proteinProgressBar">
+                        <div class="progress" id="proteinProgress"></div>
+                    </div>
+                    <p style="font-size: 10px; margin-left: 10px;color: rgb(195, 255, 0);">Protein</p>
+                </div>
+                
+                
+                
+                
+                <div class="Stats" style="width: 359px; height: 315px; left: 0px; top: 0px; position: relative">
+                            
+                            
+                        <div class="contForAllFourStat" style="display: flex;flex-direction: column;justify-content: space-between;">
+
+                                    <div class="ContForTopTwo" style="display: flex;flex-direction: row;justify-content: space-between; position: relative; top: -15px;">
+
+                                        <div class="todayStat" style="width: 166.61px; height: 101px; position:relative;">
+                                            <div class="Todaysstatscont" style="width: 166.61px; height: 101px; left: 0px; top: 0px; position: absolute; border: 1px rgb(45 88 73 / 99%) solid;background: linear-gradient(236deg, #2A2A2A 0%, #020202 100%); border-radius: 24px;">
+                                                <div class="Group1" style="width: 80px; height: 24px; left: 44px; top: 6px; position: absolute">
+                                                    <div class="Rectangle44" style="width: 65px; height: 23px; left: 7px; top: 0px; position: absolute; background: linear-gradient(260deg, rgba(0, 178.50, 255, 0.37) 0%, rgba(78.33, 0, 244.79, 0.35) 100%); border-radius: 12px; border: 1px #BDFF00 solid; backdrop-filter: blur(7.10px)">
+                                                        <div class="Today" style="width: 80px; height: 24px; left: -6px;padding-top: 3px; top: 0px; position: absolute; text-align: center; color: white; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-word">TODAY</div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="Group2" style="width: 139.95px; height: 49px; left: 18.88px; top: 38px; position: absolute">
+                                                    <div class="Protein200" style="width: 139.83px; height: 26px; left: 0px; top: 0px; position: absolute; text-align: left"><span style="color: #747474; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word">PROTEIN</span><span style="color: #BDFF00; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word;"><span>  : </span><span id="todaysProtein">00</span></span></div>
+                                                    <div class="Calorie200" style="width: 139.83px; height: 26px; left: 0.12px; top: 23px; position: absolute; text-align: left"><span style="color: #7B7B7B; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word">CALORIE</span><span style="color: #24c6da; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word"><span>  : </span><span id="todaysCalories">00</span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="yesterdayStat" style="width: 166.61px; height: 101px; position: relative">
+                                            <div class="Todaysstatscont" style="width: 166.61px; height: 101px; left: 0px; top: 0px; position: absolute; border: 1px rgb(45 88 73 / 99%) solid;background: linear-gradient(236deg, #2A2A2A 0%, #020202 100%); border-radius: 24px;">
+                                                <div class="Group1" style="width: 80px; height: 24px; left: 44px; top: 6px; position: absolute">
+                                                    <div class="Rectangle44" style="width: 65px; height: 23px; left: 7px; top: 0px; position: absolute; background: linear-gradient(260deg, rgba(0, 178.50, 255, 0.37) 0%, rgba(78.33, 0, 244.79, 0.35) 100%); border-radius: 12px; border: 1px #BDFF00 solid; backdrop-filter: blur(7.10px)">
+                                                        <div class="Today" style="width: 80px; height: 24px; left: -6px;padding-top: 3px; top: 0px; position: absolute; text-align: center; color: white; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-word">YESTERDAY</div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="Group2" style="width: 139.95px; height: 49px; left: 18.88px; top: 38px; position: absolute">
+                                                    <div class="Protein200" style="width: 139.83px; height: 26px; left: 0px; top: 0px; position: absolute; text-align: left"><span style="color: #747474; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word">PROTEIN</span><span style="color: #BDFF00; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word;"><span>  : </span><span id="yesterdaysProtein">--</span></span></div>
+                                                    <div class="Calorie200" style="width: 139.83px; height: 26px; left: 0.12px; top: 23px; position: absolute; text-align: left"><span style="color: #7B7B7B; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word">CALORIE</span><span style="color: #24c6da; font-size: 19px; font-family: Antonio; font-weight: 400; word-wrap: break-word"><span>  : </span><span id="yesterdaysCalories">--</span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <div class="ContForBottomTwo" style="display: flex;flex-direction: row;justify-content: space-between; position: relative;top:10px;">
+
+                                        <div class="Group8" style="width: 192.39px; height: 190px; position: relative; align-items: center;flex-direction: column;display: flex;">
+                                             <div class="StatWeightCont" style="display: flex;flex-direction: column;position: relative; ;width: 192.39px; height: 185px; background: linear-gradient(229deg, #001E22 0%, black 100%); border-radius: 24px; border: 2px #303030 solid">
+                                                    <div class="Group5" style="width: 80px; height: 24px; left: 64px; top: 7px; position: relative">
+                                                        <div class="Rectangle46" style="width: 65px; height: 23px; left: 7px; top: 0px; position: absolute; background: linear-gradient(260deg, rgba(0, 178.50, 255, 0.37) 0%, rgba(78.33, 0, 244.79, 0.35) 100%); border-radius: 12px; border: 1px #BDFF00 solid; backdrop-filter: blur(7.10px)"></div>
+                                                        <div class="Weight" style="width: 80px; height: 24px; left: 0px; top: 3px; position: absolute; text-align: center; color: white; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-word">WEIGHT</div>
+                                                    </div>
+                                                    
+                                                    <div class="Lb" style="width: 186px;  top: 0px; position: relative; text-align: center; align-self: center;color: white; font-size: 57px; font-family: Anton; font-weight: 400; word-wrap: break-word"><span id="wttrgt">0</span><span style="color: #c9c9c983;"> Lbs</span></div>
+                                                    
+                                                    <div class="Group6" style="width: 170px; height: 18px; left: 14px; top: -13px; position: relative">
+                                                        <div class="Rectangle47" style="width: 170px; height: 18px; left: 0px; top: 0px; position: absolute; background: rgba(217, 217, 217, 0.08); border-radius: 7px"></div>
+                                                        <div class="ProgressSince" style="width: 125px; height: 15px; left: 23px; top: 1px; position: absolute; text-align: center; color: white; font-size: 10px; font-family: Anton; font-weight: 400; letter-spacing: 2.10px; word-wrap: break-word">PROGRESS SINCE</div>
+                                                    </div>
+
+                                                    <div class="Group7" style="width: 175px; height: 48px; align-self: center; top: 0px; position: relative;display: flex;flex-direction: row;">
+                                                        <div class="DayOne" style="width: 37px; height: 48px; left: 0px; top: 0px; position: relative; text-align: center; color: white; font-size: 13px; font-family: Anton; font-weight: 400; word-wrap: break-word">DAY<br/>ONE</div>
+                                                        <div class="1lb" style="width: 60px; padding:0px 3px; left: 0px; top: -8px; position: relative; text-align: center"><span id="wtChngSinceDayOne" style="color: #FD0000; font-size: 37px; font-family: Anton; font-weight: 400; word-wrap: break-word">--</span><span style="color: #FD0000; font-size: 10px; font-family: Anton; font-weight: 400; word-wrap: break-word">LB</span></div>
+                                                        <div class="LastWeek" style="width: 40px; height: 48px; padding-left: 5px;left: 0px; top: 0px; position: relative; text-align: center; color: white; font-size: 13px; font-family: Anton; font-weight: 400; word-wrap: break-word">LAST<br/>UPDATE</div>
+                                                        <div class="1lb" style="width: 60px; padding:0px 3px; left: 0px; top: -8px; position: relative; text-align: center"><span id="wtChangeSinceLastUpdate" style="color: #FF0000; font-size: 37px; font-family: Anton; font-weight: 400; word-wrap: break-word">--</span><span style="color: #FF0000; font-size: 10px; font-family: Anton; font-weight: 400; word-wrap: break-word">LB</span></div>
+                                                        
+                                                    </div>
+                                            </div>        
+                                        </div>
+
+                                        <div class="Group15" style="width: 143px; height: 171px; position: relative">
+
+                                                <div class="StatAgvCont" style="width: 141px; height: 185px; left: 0px; top: 0px; position: relative;display: flex;flex-direction: column;justify-content: space-around;align-items: center; background: linear-gradient(229deg, #001E22 0%, black 100%); box-shadow: 0px 10px 23.399999618530273px 7px rgba(35.40, 69.28, 189.41, 0.11) inset; border-radius: 24px; border: 2px #303030 solid; backdrop-filter: blur(8.80px)">
+                                                    
+                                                        
+                                                        <div class="Group9" style="width: 80px; height: 24px; left: 0px; top: 0px; position: relative">
+                                                            <div class="Rectangle48" style="width: 65px; height: 23px; left: 7px; top: 0px; position: absolute; background: linear-gradient(260deg, rgba(0, 178.50, 255, 0.37) 0%, rgba(78.33, 0, 244.79, 0.35) 100%); border-radius: 12px; border: 1px #BDFF00 solid; backdrop-filter: blur(7.10px)"></div>
+                                                            <div class="Average" style="width: 80px; height: 24px; left: 0px; top: 3px; position: absolute; text-align: center; color: white; font-size: 12px; font-family: Anton; font-weight: 400; word-wrap: break-word">AVERAGE</div>
+                                                        </div>
+
+                                                        
+                                                        <div class="StatAvgDailyCont" style="width: 122px;display: flex;flex-direction: column;justify-content: space-around;align-items: center; height: 120px; left: 0px; top: 0px; position: relative; background: rgba(217, 217, 217, 0.22); border-radius: 16px">
+                                                           
+                                                            <div class="Daily" style="width: 65px; height: 13px; left: 0px; top: 3px; position: relative; text-align: center; color: white; font-size: 10px; font-family: Archivo Black; font-weight: 400; letter-spacing: 3.60px; word-wrap: break-word">DAILY</div>
+                                                            <div class="CalorieProtein" style="width: 122px; height: 13px; left: 0px; top: 0px; position: relative; text-align: center; color: #BBBBBB; font-size: 10px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word">CALORIE   PROTEIN</div>
+                                                            
+                                                            <div style="position: relative; display: flex; flex-direction: row;">
+                                                                <div style="width: 49px; height: 27px; left: 0px; top: 0px; position: relative; text-align: center; color: #24c6da; font-size: 18px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word"><span id="AvgCalPday">--</span></div>
+                                                                <div style="width: 49px; height: 27px; left: 0px; top: 0px; position: relative; text-align: center; color: #BBF908; font-size: 18px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word"><span id="AvgPrtPday">--</span></div>
+                                                            </div>
+
+                                                        </div>
+                                                    
+
+                                                        <!-- <div class="StatAvgWeeklyCont" style="width: 122px;display: flex;flex-direction: column;justify-content: space-around;align-items: center; height: 62px; left: 0px; top: 0px; position: relative; background: rgba(217, 217, 217, 0.22); border-radius: 16px">
+                                                           
+                                                            <div class="Daily" style="width: 69px; height: 13px; left: 0px; top: 3px; position: relative; text-align: center; color: white; font-size: 10px; font-family: Archivo Black; font-weight: 400; letter-spacing: 3.60px; word-wrap: break-word">WEEKLY</div>
+                                                            <div class="CalorieProtein" style="width: 122px; height: 13px; left: 0px; top: 0px; position: relative; text-align: center; color: #BBBBBB; font-size: 10px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word">CALORIE   PROTEIN</div>
+                                                            
+                                                            <div style="position: relative; display: flex; flex-direction: row;">
+                                                                <div style="width: 49px; height: 27px; left: 0px; top: 0px; position: relative; text-align: center; color: #24c6da; font-size: 18px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word">150</div>
+                                                                <div style="width: 49px; height: 27px; left: 0px; top: 0px; position: relative; text-align: center; color: #BBF908; font-size: 18px; font-family: Archivo Black; font-weight: 400; word-wrap: break-word">150</div>
+                                                            </div>
+
+                                                        </div> -->
+
+                                                    
+                                                </div>
+                                        </div>
+
+                                        
+
+                                    </div>
+
+                        </div>
+                    </div>
+                       
+
+                        
+
+
+                        
+
+              </div>
+
+
+
+        <!-- <div class="Bmrcalculatorcont" style="width: 414px; height: 176px; background: #CF3E00; border-radius: 42px; border: 3px rgba(122.06, 128.90, 164.78, 0.20) solid; backdrop-filter: blur(8.80px); display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+            
+                <div class="BMIcalc" style="position: relative; width: 185px; height: 150px; background-color: #151515;border-radius: 25px;box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 89%);">
+
+                </div>
+
+                <div class="showAllData&GymRoutineCont" style="position: relative; width: 185px; height: 150px; background-color: #222222; display: flex; flex-direction: column;justify-content: space-around; align-items: center;border-radius: 25px;box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 89%);">
+
+                    <div class="ShowAllData" style="position: relative; width: 165px; height: 55px; background-color: #4d4d4d;border-radius: 16px;box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 48%);">
+
+                    </div>
+
+
+                    <div class="GymRoutine" style="position: relative; width: 165px; height: 55px; background-color: #393939; border-radius: 16px;box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 48%);">
+                        
+                    </div>
+                
+                 </div>
+        </div> -->
+</div>   <!-- app div ends -->
+
+
+
+        <!--==============================================================-->
+
+</div>
+
+    <script src="data.js" type="module"></script>
+</body>
+</html>
