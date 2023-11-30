@@ -197,6 +197,12 @@ document.getElementById('openSetGoals').addEventListener('click', function()
             // {
             //     // alert('Please enter valid inputs.');
             // }
+            document.getElementById('weightTarget').value = '';
+            document.getElementById('dailyCalorieTarget').value = '';
+            document.getElementById('dailyProteinTarget').value = '';
+            document.getElementById('weekTarget').value = '';
+            document.getElementById('startWeight').value = '';
+            document.getElementById('currentWeight').value = '';
 
 
         });
@@ -210,6 +216,8 @@ document.getElementById('openSetGoals').addEventListener('click', function()
 
             document.getElementById('resetGoalStart').classList.remove('resetGoaldate');
             document.getElementById('resetGoalStart').classList.add('resetGoaldatehdn');
+
+            // document.getElementById('resetGoalStart').classList.add('hidden');
         });
 
         // Function to cancel setting goals popup
